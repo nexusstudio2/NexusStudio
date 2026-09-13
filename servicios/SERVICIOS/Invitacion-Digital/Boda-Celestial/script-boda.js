@@ -1,13 +1,13 @@
 // =====================================================
-// CANVAS DE ESTRELLAS
+// CANVAS DE ESTRELLAS GLOBAL
 // =====================================================
 const canvas = document.getElementById("bc-stars");
 const ctx = canvas.getContext("2d");
 let stars = [];
 
 function resizeCanvas() {
-  canvas.width = canvas.offsetWidth;
-  canvas.height = canvas.offsetHeight;
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
   const count = Math.floor((canvas.width * canvas.height) / 6000);
   stars = Array.from({ length: count }, () => ({
     x: Math.random() * canvas.width,

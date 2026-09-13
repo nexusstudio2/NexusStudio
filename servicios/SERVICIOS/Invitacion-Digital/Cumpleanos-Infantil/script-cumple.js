@@ -12,7 +12,8 @@ positions.forEach((left, i) => {
   balloon.style.width = 46 + (i % 3) * 10 + "px";
   balloon.style.height = balloon.style.width;
   balloon.style.background = heroColors[i % heroColors.length];
-  balloon.style.animationDelay = i * 0.6 + "s";
+  balloon.style.animationDuration = 7 + (i % 3) * 2 + "s";
+  balloon.style.animationDelay = i * 0.8 + "s";
   hero.appendChild(balloon);
 });
 

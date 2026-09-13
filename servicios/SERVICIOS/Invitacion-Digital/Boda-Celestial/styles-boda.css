@@ -19,6 +19,17 @@ body {
   color: var(--cream);
   font-family: "EB Garamond", serif;
   line-height: 1.7;
+  position: relative;
+}
+
+/* CANVAS DE ESTRELLAS FIJO DE FONDO */
+#bc-stars {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
 }
 
 .container {
@@ -27,7 +38,7 @@ body {
   padding: 0 24px;
 }
 
-/* HERO / CANVAS */
+/* HERO */
 .bc-hero {
   position: relative;
   min-height: 100vh;
@@ -37,13 +48,7 @@ body {
   justify-content: center;
   text-align: center;
   overflow: hidden;
-  background: radial-gradient(ellipse at 50% 20%, var(--navy) 0%, var(--navy-deep) 75%);
-}
-
-#bc-stars {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
+  background: radial-gradient(ellipse at 50% 20%, rgba(13, 21, 64, 0.85) 0%, rgba(7, 11, 36, 0.95) 75%);
 }
 
 .bc-hero-content {
@@ -128,6 +133,8 @@ body {
 /* SECTIONS COMMON */
 .bc-section {
   padding: 90px 0;
+  position: relative;
+  z-index: 1;
 }
 
 .bc-section-kicker {
@@ -202,7 +209,8 @@ body {
   padding: 30px 24px;
   text-align: center;
   position: relative;
-  background: rgba(201, 206, 224, 0.03);
+  background: rgba(13, 21, 64, 0.4);
+  backdrop-filter: blur(4px);
 }
 
 .bc-ticket::before,
@@ -253,7 +261,8 @@ body {
 
 /* RSVP */
 .bc-rsvp {
-  background: var(--navy);
+  background: rgba(13, 21, 64, 0.7);
+  backdrop-filter: blur(6px);
 }
 
 .bc-form {
@@ -361,6 +370,8 @@ body {
 .bc-closing {
   text-align: center;
   padding: 90px 0 60px;
+  position: relative;
+  z-index: 1;
 }
 
 .bc-closing p {
@@ -382,6 +393,8 @@ body {
 .bc-back {
   text-align: center;
   padding-bottom: 40px;
+  position: relative;
+  z-index: 1;
 }
 
 .bc-back a {

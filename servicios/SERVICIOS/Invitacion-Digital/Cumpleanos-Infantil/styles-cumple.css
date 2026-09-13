@@ -45,10 +45,11 @@ body {
 
 .ci-balloon-deco {
   position: absolute;
-  bottom: -60px;
+  bottom: -100px;
   border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-  animation: ci-float 7s ease-in-out infinite;
-  opacity: 0.85;
+  animation: ci-float 8s linear infinite;
+  opacity: 0.8;
+  pointer-events: none;
 }
 
 .ci-balloon-deco::after {
@@ -63,12 +64,19 @@ body {
 }
 
 @keyframes ci-float {
-  0%,
-  100% {
-    transform: translateY(0) rotate(-2deg);
+  0% {
+    transform: translateY(0) translateX(0) rotate(-2deg);
+    opacity: 0;
   }
-  50% {
-    transform: translateY(-38px) rotate(2deg);
+  20% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-110vh) translateX(25px) rotate(4deg);
+    opacity: 0;
   }
 }
 
