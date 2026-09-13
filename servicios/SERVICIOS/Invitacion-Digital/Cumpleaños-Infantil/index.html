@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>¡Emilio cumple 6! | Aventura en la Selva</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Quicksand:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles-cumple.css" />
+  </head>
+  <body>
+    <!-- HERO -->
+    <section class="ci-hero">
+      <div class="ci-hero-content">
+        <div class="ci-kicker">🌴 ¡Están todos invitados! 🌴</div>
+        <h1>¡Emilio<br />cumple <span>6</span>!</h1>
+        <div class="ci-theme">Tema: Aventura en la Selva</div>
+      </div>
+      <div class="ci-scroll-hint">↓ desliza para más ↓</div>
+    </section>
+
+    <!-- JUEGO DE GLOBOS -->
+    <section class="ci-section ci-game">
+      <div class="container">
+        <h2>🎈 Revienta los globos</h2>
+        <p class="ci-section-sub">
+          Toca cada globo para descubrir el mensaje sorpresa
+        </p>
+
+        <div class="ci-balloons-row">
+          <div class="ci-game-balloon" style="background: #ffd966" data-word="w1">🎈</div>
+          <div class="ci-game-balloon" style="background: #ff9f68" data-word="w2">🎈</div>
+          <div class="ci-game-balloon" style="background: #ff6f91" data-word="w3">🎈</div>
+          <div class="ci-game-balloon" style="background: #2ec4b6" data-word="w4">🎈</div>
+        </div>
+
+        <div class="ci-balloons-row" style="margin-top: 20px">
+          <div class="ci-word-slot" data-word="w1">¡Nos</div>
+          <div class="ci-word-slot" data-word="w2">vemos</div>
+          <div class="ci-word-slot" data-word="w3">en la</div>
+          <div class="ci-word-slot" data-word="w4">selva! 🐒</div>
+        </div>
+
+        <p class="ci-message-hint">Toca los 4 globos para completar el mensaje</p>
+      </div>
+    </section>
+
+    <!-- DETALLES -->
+    <section class="ci-section">
+      <div class="container">
+        <h2>🗓️ Detalles de la fiesta</h2>
+        <div class="ci-ticket">
+          <div class="ci-ticket-icon">🎉</div>
+          <h3>¡Ven a celebrar con nosotros!</h3>
+          <div class="ci-ticket-row">
+            <span>Fecha</span>
+            <span>Sábado 24 de octubre</span>
+          </div>
+          <div class="ci-ticket-row">
+            <span>Hora</span>
+            <span>1:00 PM</span>
+          </div>
+          <div class="ci-ticket-row">
+            <span>Lugar</span>
+            <span>Salón Aventura, Chihuahua</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACTIVIDADES -->
+    <section class="ci-section">
+      <div class="container">
+        <h2>🙉 Habrá de todo</h2>
+        <p class="ci-section-sub">
+          Una tarde llena de diversión para grandes y chiquitos
+        </p>
+        <div class="ci-activities-grid">
+          <div class="ci-activity">
+            <div class="ci-activity-icon">🪅</div>
+            <p>Piñata</p>
+          </div>
+          <div class="ci-activity">
+            <div class="ci-activity-icon">🏰</div>
+            <p>Castillo inflable</p>
+          </div>
+          <div class="ci-activity">
+            <div class="ci-activity-icon">🎨</div>
+            <p>Pintacaritas</p>
+          </div>
+          <div class="ci-activity">
+            <div class="ci-activity-icon">🍭</div>
+            <p>Algodón de azúcar</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RSVP -->
+    <section class="ci-section ci-rsvp">
+      <div class="container">
+        <h2>💌 ¿Nos acompañas?</h2>
+        <p class="ci-section-sub">Ayúdanos a contar cuántos vendrán</p>
+        <form class="ci-form" id="ci-rsvp-form">
+          <input type="text" id="ci-nombre" placeholder="Nombre de la familia" required />
+          <select id="ci-asistencia">
+            <option>Sí, ahí estaremos</option>
+            <option>No podremos asistir</option>
+          </select>
+          <input
+            type="number"
+            id="ci-ninos"
+            placeholder="Número de niños"
+            min="0"
+          />
+          <button type="submit" class="ci-submit">Confirmar asistencia</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- CIERRE -->
+    <section class="ci-closing">
+      <div class="container">
+        <p>¡Te esperamos para rugir de alegría! 🦁🎉</p>
+      </div>
+    </section>
+
+    <div class="ci-back">
+      <a href="../../../../index-servicios.html">← Volver a Nexus Studio</a>
+    </div>
+
+    <script src="script-cumple.js"></script>
+  </body>
+</html>

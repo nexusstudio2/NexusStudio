@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Horno de Alba | Pastelería</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Nunito+Sans:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles-pasteleria.css" />
+  </head>
+  <body>
+    <!-- HERO -->
+    <section class="ha-hero">
+      <div class="container">
+        <div class="ha-mark"><span></span> Horno de Alba</div>
+        <h1>Pasteles hechos a mano, para los días que quieres recordar</h1>
+        <p>
+          Pasteles de boda, XV años y postres para eventos en Chihuahua.
+          Cada pedido se hornea fresco, según tu fecha.
+        </p>
+        <div class="ha-hero-actions">
+          <a href="#menu" class="ha-btn ha-btn-primary">Ver el menú ↓</a>
+          <a
+            href="https://wa.me/526143771797?text=Hola%2C%20vi%20el%20cat%C3%A1logo%20de%20Horno%20de%20Alba%20y%20me%20interesa%20cotizar%20un%20pastel"
+            class="ha-btn ha-btn-ghost"
+            target="_blank"
+            rel="noopener"
+            >Cotizar por WhatsApp</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- PASTEL DEL MES (VITRINA) -->
+    <section class="ha-featured">
+      <div class="container">
+        <div class="ha-featured-card">
+          <div class="ha-featured-visual">🍰</div>
+          <div class="ha-featured-body">
+            <span class="ha-featured-tag">Pastel del mes</span>
+            <h2>Naked Cake de Frutos Rojos</h2>
+            <p>
+              Tres pisos semi desnudos, relleno de queso crema y frutos rojos
+              de temporada. Rinde para 20 porciones — ideal para bodas de
+              jardín.
+            </p>
+            <div class="ha-featured-price">
+              $1,800 <span>MXN · para 20 personas</span>
+            </div>
+            <a
+              href="https://wa.me/526143771797?text=Hola%2C%20me%20interesa%20el%20Naked%20Cake%20de%20Frutos%20Rojos"
+              class="ha-btn ha-btn-primary"
+              target="_blank"
+              rel="noopener"
+              >Quiero este →</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENÚ TIPO CARTA -->
+    <section class="ha-menu" id="menu">
+      <div class="container">
+        <div class="ha-menu-head">
+          <span>Nuestra carta</span>
+          <h2>Pasteles y postres por categoría</h2>
+        </div>
+
+        <div class="ha-tabs">
+          <button class="ha-tab-btn active" data-category="boda">
+            Pasteles de Boda
+          </button>
+          <button class="ha-tab-btn" data-category="xv">
+            Pasteles de XV
+          </button>
+          <button class="ha-tab-btn" data-category="individuales">
+            Cupcakes y Postres
+          </button>
+          <button class="ha-tab-btn" data-category="especiales">
+            Pedidos Especiales
+          </button>
+        </div>
+
+        <!-- BODA -->
+        <div class="ha-menu-list active" data-category="boda">
+          <div class="ha-menu-item">
+            <div class="ha-menu-item-info">
+              <h4>Pastel Clásico Blanco (3 pisos)</h4>
+              <p>Diseño clásico con flores comestibles.</p>
+            </div>
+            <div class="ha-menu-item-price">Desde $2,500 MXN</div>
+          </div>
+          <div class="ha-menu-item">
+            <div class="ha-menu-item-info">
+              <h4>Pastel Chocolate Belga</h4>
+              <p>Relleno de ganache y frutos rojos.</p>
+            </div>
+            <div class="ha-menu-item-price">Desde $2,800 MXN</div>
+          </div>
+          <div class="ha-menu-item">
+            <div class="ha-menu-item-info">
+              <h4>Pastel Semi Desnudo (Naked Cake)</h4>
+              <p>Estilo rústico, ideal para bodas de jardín.</p>
+            </div>
+            <div class="ha-menu-item-price">Desde $2,200 MXN</div>
+          </div>
+        </div>
+
+        <!-- XV -->
+        <div class="ha-menu-list" data-category="xv">
+          <div class="ha-menu-item">
+            <div class="ha-menu-item-info">
+              <h4>Pastel Temático Personalizado</h4>
+              <p>Diseño a color según el tema de la fiesta.</p>
+            </div>
+            <div class="ha-menu-item-price">Desde $1,900 MXN</div>
+          </div>
+          <div class="ha-menu-item">
+            <div class="ha-menu-item-info">
+              <h4>Pastel de Vainilla y Fresa</h4>
+              <p>Clásico y ligero, rinde para 40 porciones.</p>
+            </div>
+            <div class="ha-menu-item-price">Desde $1,600 MXN</div>
+          </div>
+        </div>
+
+        <!-- INDIVIDUALES -->
+        <div class="ha-menu-list" data-category="individuales">
+          <div class="ha-menu-item">
+            <div class="ha-menu-item-info">
+              <h4>Cupcakes Decorados (docena)</h4>
+              <p>Vainilla, chocolate o red velvet.</p>
+            </div>
+            <div class="ha-menu-item-price">$280 MXN docena</div>
+          </div>
+          <div class="ha-menu-item">
+            <div class="ha-menu-item-info">
+              <h4>Mini Tartaletas de Fruta</h4>
+              <p>Base de mantequilla con fruta de temporada.</p>
+            </div>
+            <div class="ha-menu-item-price">$220 MXN docena</div>
+          </div>
+          <div class="ha-menu-item">
+            <div class="ha-menu-item-info">
+              <h4>Postre en Vaso (Tiramisú o Tres Leches)</h4>
+              <p>Individual, ideal para mesas de evento.</p>
+            </div>
+            <div class="ha-menu-item-price">$45 MXN c/u</div>
+          </div>
+        </div>
+
+        <!-- ESPECIALES -->
+        <div class="ha-menu-list" data-category="especiales">
+          <div class="ha-menu-item">
+            <div class="ha-menu-item-info">
+              <h4>Pastel Sin Azúcar</h4>
+              <p>Endulzado con stevia, mismo sabor de siempre.</p>
+            </div>
+            <div class="ha-menu-item-price">Desde $2,000 MXN</div>
+          </div>
+          <div class="ha-menu-item">
+            <div class="ha-menu-item-info">
+              <h4>Pastel Vegano</h4>
+              <p>Sin huevo ni lácteos.</p>
+            </div>
+            <div class="ha-menu-item-price">Desde $2,300 MXN</div>
+          </div>
+          <div class="ha-menu-item">
+            <div class="ha-menu-item-info">
+              <h4>Pastel Personalizado por Encargo</h4>
+              <p>Cuéntanos tu idea y la hacemos realidad.</p>
+            </div>
+            <div class="ha-menu-item-price">Cotización</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERÍA POLAROID -->
+    <section class="ha-gallery">
+      <div class="container">
+        <div class="ha-menu-head">
+          <span>Entregas recientes</span>
+          <h2>Algunos pasteles que salieron del horno</h2>
+        </div>
+        <div class="ha-polaroid-row">
+          <div class="ha-polaroid" style="transform: rotate(-4deg)">
+            <div class="ha-polaroid-photo" style="background: linear-gradient(135deg, #f1dede, #d9a5a0)"></div>
+            <p>Boda de Karla & Santiago</p>
+          </div>
+          <div class="ha-polaroid" style="transform: rotate(3deg)">
+            <div class="ha-polaroid-photo" style="background: linear-gradient(135deg, #ecd9c9, #c29456)"></div>
+            <p>XV años de Camila</p>
+          </div>
+          <div class="ha-polaroid" style="transform: rotate(-2deg)">
+            <div class="ha-polaroid-photo" style="background: linear-gradient(135deg, #e8cfd4, #b97d84)"></div>
+            <p>Boda de Ana & Rodrigo</p>
+          </div>
+          <div class="ha-polaroid" style="transform: rotate(5deg)">
+            <div class="ha-polaroid-photo" style="background: linear-gradient(135deg, #f3e6d6, #cba46e)"></div>
+            <p>Cumpleaños de la familia Flores</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FICHA TÉCNICA / CÓMO PEDIR -->
+    <section class="ha-howto">
+      <div class="container">
+        <div class="ha-menu-head">
+          <span>Cómo pedir</span>
+          <h2>Ficha del proceso</h2>
+        </div>
+        <div class="ha-howto-list">
+          <div class="ha-howto-row">
+            <span>Anticipación mínima</span>
+            <span>5 días para pasteles de boda o XV, 48 horas para postres individuales</span>
+          </div>
+          <div class="ha-howto-row">
+            <span>Anticipo</span>
+            <span>50% al confirmar el pedido, resto contra entrega</span>
+          </div>
+          <div class="ha-howto-row">
+            <span>Prueba de sabor</span>
+            <span>Disponible con cita previa, sin costo para pedidos de boda</span>
+          </div>
+          <div class="ha-howto-row">
+            <span>Entrega</span>
+            <span>A domicilio en Chihuahua o recoger en punto de entrega</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOTAS DE CLIENTES -->
+    <section class="ha-notes">
+      <div class="container">
+        <div class="ha-menu-head">
+          <span>Notas de clientes</span>
+          <h2>Lo que nos han escrito</h2>
+        </div>
+        <div class="ha-notes-grid">
+          <div class="ha-note">
+            <p>"El pastel llegó impecable y el sabor sorprendió hasta a mi suegra, que es difícil de convencer."</p>
+            <span>— Karla, boda</span>
+          </div>
+          <div class="ha-note">
+            <p>"Hicimos la prueba de sabor tres semanas antes. Eso nos quitó todo el nervio."</p>
+            <span>— Familia Flores</span>
+          </div>
+          <div class="ha-note">
+            <p>"Pedimos algo sin azúcar para mi papá y nadie notó la diferencia."</p>
+            <span>— Ana, XV años</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CIERRE -->
+    <section class="ha-closing">
+      <div class="container">
+        <h2>¿Ya tienes fecha?</h2>
+        <p>
+          Escríbenos con la fecha de tu evento y el número de invitados, y
+          te armamos una propuesta.
+        </p>
+        <a
+          href="https://wa.me/526143771797?text=Hola%2C%20me%20interesa%20cotizar%20un%20pastel%20para%20mi%20evento"
+          class="ha-btn ha-btn-primary"
+          target="_blank"
+          rel="noopener"
+          >Cotizar mi pastel →</a
+        >
+      </div>
+    </section>
+
+    <div class="ha-back">
+      <a href="../../../index-servicios.html">← Volver a Nexus Studio</a>
+    </div>
+
+    <script src="script-pasteleria.js"></script>
+  </body>
+</html>

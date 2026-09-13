@@ -1,0 +1,336 @@
+:root {
+  --cream: #f7ebe3;
+  --cream-deep: #efdcd0;
+  --terracotta: #c77b5a;
+  --ink: #3a2a24;
+  --gold-rose: #b8916b;
+  --muted: #8a7368;
+  --border: #e8d7c9;
+  --card: #fffaf6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "Poppins", sans-serif;
+  font-size: 15.5px;
+  line-height: 1.65;
+}
+
+.rc-container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* HERO */
+.rc-hero {
+  padding: 80px 0 56px;
+  text-align: center;
+  background: radial-gradient(ellipse at top, var(--cream-deep) 0%, var(--cream) 65%);
+}
+
+.rc-avatar {
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  margin: 0 auto 28px;
+  background: linear-gradient(150deg, #c77b5a 0%, #e8b4a0 100%);
+  border: 3px solid #fff;
+  box-shadow: 0 6px 20px rgba(58, 42, 36, 0.12);
+}
+
+.rc-role {
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.rc-hero h1 {
+  font-family: "Bodoni Moda", serif;
+  font-weight: 500;
+  font-size: clamp(32px, 5.5vw, 46px);
+  color: var(--ink);
+}
+
+.rc-hero p {
+  margin: 16px auto 0;
+  max-width: 420px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.rc-hero-actions {
+  margin-top: 30px;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.rc-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 26px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.15s, background 0.15s;
+  border: 1px solid transparent;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+
+.rc-btn-primary {
+  background: var(--terracotta);
+  color: #fff;
+}
+
+.rc-btn-primary:hover {
+  background: #a8623f;
+  transform: translateY(-1px);
+}
+
+.rc-btn-ghost {
+  border-color: var(--border);
+  color: var(--ink);
+  background: transparent;
+}
+
+.rc-btn-ghost:hover {
+  border-color: var(--terracotta);
+  color: var(--terracotta);
+}
+
+/* SECTION COMMON */
+.rc-section {
+  padding: 56px 0;
+}
+
+.rc-section-label {
+  text-align: center;
+  font-size: 12.5px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gold-rose);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.rc-section-title {
+  text-align: center;
+  font-family: "Bodoni Moda", serif;
+  font-weight: 500;
+  font-size: clamp(24px, 4vw, 32px);
+  margin-bottom: 44px;
+}
+
+/* SERVICIOS */
+.rc-services {
+  background: var(--cream-deep);
+}
+
+.rc-service-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.rc-service-row:last-child {
+  border-bottom: none;
+}
+
+.rc-service-info h4 {
+  font-family: "Bodoni Moda", serif;
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.rc-service-info p {
+  font-size: 13px;
+  color: var(--muted);
+  max-width: 360px;
+}
+
+.rc-service-price {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--terracotta);
+  white-space: nowrap;
+}
+
+/* ANTES / DESPUÉS */
+.rc-transform-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.rc-transform-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.rc-transform-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 150px;
+}
+
+.rc-transform-half {
+  position: relative;
+}
+
+.rc-transform-half span {
+  position: absolute;
+  bottom: 8px;
+  left: 10px;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.rc-transform-caption {
+  padding: 14px 16px 16px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* TRABAJO RECIENTE (grid tipo instagram) */
+.rc-work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+
+.rc-work-item {
+  aspect-ratio: 1 / 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.rc-work-caption {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 10px 12px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.55), transparent);
+  color: #fff;
+  font-size: 11.5px;
+}
+
+/* TESTIMONIOS CARRUSEL HORIZONTAL */
+.rc-testimonials-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 4px 24px 20px;
+  scroll-snap-type: x mandatory;
+}
+
+.rc-t-card {
+  flex: 0 0 280px;
+  scroll-snap-align: start;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px 22px;
+}
+
+.rc-t-card p {
+  font-family: "Bodoni Moda", serif;
+  font-style: italic;
+  font-size: 15.5px;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+.rc-t-card span {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* DISPONIBILIDAD + CONTACTO */
+.rc-closing {
+  text-align: center;
+  padding: 64px 0;
+  background: var(--ink);
+}
+
+.rc-closing-label {
+  font-size: 12.5px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gold-rose);
+  margin-bottom: 14px;
+}
+
+.rc-closing h2 {
+  font-family: "Bodoni Moda", serif;
+  font-weight: 500;
+  font-size: clamp(26px, 4vw, 34px);
+  color: #fdf6f0;
+  margin-bottom: 12px;
+}
+
+.rc-closing p {
+  color: rgba(253, 246, 240, 0.7);
+  max-width: 420px;
+  margin: 0 auto 28px;
+  font-size: 14px;
+}
+
+.rc-back {
+  text-align: center;
+  padding: 28px 0 44px;
+  background: var(--ink);
+}
+
+.rc-back a {
+  font-size: 12px;
+  color: rgba(253, 246, 240, 0.55);
+  text-decoration: none;
+}
+
+.rc-back a:hover {
+  color: var(--gold-rose);
+}
+
+@media (max-width: 700px) {
+  .rc-transform-grid,
+  .rc-work-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .rc-service-row {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .rc-transform-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elena & Mateo | Nuestra Boda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marcellus&family=Cormorant:ital,wght@1,500&family=EB+Garamond:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles-boda.css" />
+  </head>
+  <body>
+    <!-- HERO -->
+    <section class="bc-hero">
+      <canvas id="bc-stars"></canvas>
+      <div class="bc-hero-content">
+        <div class="bc-kicker">Nos casamos</div>
+        <h1 class="bc-names">
+          Elena
+          <span>&</span>
+          Mateo
+        </h1>
+        <div class="bc-date">12 de diciembre, 2026 · Chihuahua, México</div>
+
+        <div class="bc-countdown">
+          <div class="bc-countdown-item">
+            <div class="bc-countdown-num" id="bc-days">0</div>
+            <div class="bc-countdown-label">Días</div>
+          </div>
+          <div class="bc-countdown-item">
+            <div class="bc-countdown-num" id="bc-hours">0</div>
+            <div class="bc-countdown-label">Horas</div>
+          </div>
+          <div class="bc-countdown-item">
+            <div class="bc-countdown-num" id="bc-minutes">0</div>
+            <div class="bc-countdown-label">Min</div>
+          </div>
+          <div class="bc-countdown-item">
+            <div class="bc-countdown-num" id="bc-seconds">0</div>
+            <div class="bc-countdown-label">Seg</div>
+          </div>
+        </div>
+      </div>
+      <div class="bc-scroll-hint">↓ desliza para más ↓</div>
+    </section>
+
+    <!-- NUESTRA HISTORIA -->
+    <section class="bc-section">
+      <div class="container">
+        <div class="bc-section-kicker">Nuestra historia</div>
+        <h2>Cómo llegamos hasta aquí</h2>
+        <div class="bc-timeline">
+          <div class="bc-timeline-item">
+            <h4>Nos conocimos</h4>
+            <p>
+              En una boda de amigos, en 2019. Mateo llegó tarde y se sentó en
+              la única silla libre, justo al lado de Elena.
+            </p>
+          </div>
+          <div class="bc-timeline-item">
+            <h4>La propuesta</h4>
+            <p>
+              Una noche de invierno, bajo el mismo cielo que inspiró esta
+              invitación. Elena dijo que sí antes de que Mateo terminara la
+              pregunta.
+            </p>
+          </div>
+          <div class="bc-timeline-item">
+            <h4>Hoy</h4>
+            <p>
+              Después de siete años juntos, llegó el momento de celebrarlo
+              con quienes más queremos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DETALLES DEL EVENTO -->
+    <section class="bc-section">
+      <div class="container">
+        <div class="bc-section-kicker">Detalles</div>
+        <h2>El gran día</h2>
+        <div class="bc-tickets">
+          <div class="bc-ticket">
+            <div class="bc-ticket-icon">💍</div>
+            <h4>Ceremonia</h4>
+            <p>Catedral de Chihuahua</p>
+            <p>Av. Libertad y 4a, Centro</p>
+            <div class="bc-ticket-time">5:00 PM</div>
+          </div>
+          <div class="bc-ticket">
+            <div class="bc-ticket-icon">🥂</div>
+            <h4>Recepción</h4>
+            <p>Salón Los Cerezos</p>
+            <p>Camino a San Juanito Km 3</p>
+            <div class="bc-ticket-time">7:30 PM</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UBICACIÓN + VESTIMENTA -->
+    <section class="bc-section">
+      <div class="container">
+        <div class="bc-info-grid">
+          <div class="bc-info-block">
+            <h4>Cómo llegar</h4>
+            <p>
+              El salón cuenta con estacionamiento propio. Si vienes de fuera
+              de la ciudad, con gusto te ayudamos a recomendarte hospedaje
+              cercano.
+            </p>
+            <a
+              href="https://maps.google.com"
+              class="bc-map-link"
+              target="_blank"
+              rel="noopener"
+              >Ver ubicación en el mapa →</a
+            >
+          </div>
+          <div class="bc-info-block">
+            <h4>Código de vestimenta</h4>
+            <p>Formal · Paleta azul marino, plata y dorado.</p>
+            <p style="opacity: 0.6; font-size: 13px">
+              Pedimos amablemente evitar el color blanco.
+            </p>
+            <div class="bc-dress-swatches">
+              <div class="bc-swatch" style="background: #0d1540"></div>
+              <div class="bc-swatch" style="background: #c9cee0"></div>
+              <div class="bc-swatch" style="background: #9c8a5c"></div>
+              <div class="bc-swatch" style="background: #070b24"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RSVP -->
+    <section class="bc-section bc-rsvp">
+      <div class="container">
+        <div class="bc-section-kicker">Confírmanos</div>
+        <h2>¿Nos acompañas?</h2>
+        <form class="bc-form" id="bc-rsvp-form">
+          <div>
+            <label for="bc-nombre">Tu nombre</label>
+            <input type="text" id="bc-nombre" required />
+          </div>
+          <div>
+            <label for="bc-asistencia">¿Asistirás?</label>
+            <select id="bc-asistencia">
+              <option>Sí, ahí estaré</option>
+              <option>No podré asistir</option>
+            </select>
+          </div>
+          <div>
+            <label for="bc-acompanantes">Número de acompañantes</label>
+            <input type="number" id="bc-acompanantes" min="0" value="0" />
+          </div>
+          <button type="submit" class="bc-submit">Confirmar asistencia</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- CIERRE -->
+    <section class="bc-closing">
+      <div class="container">
+        <p>
+          "Bajo las mismas estrellas que nos vieron enamorarnos, queremos
+          celebrar contigo."
+        </p>
+        <div class="bc-closing-names">Elena & Mateo</div>
+      </div>
+    </section>
+
+    <div class="bc-back">
+      <a href="../../../index-servicios.html">← Volver a Nexus Studio</a>
+    </div>
+
+    <script src="script-boda.js"></script>
+  </body>
+</html>

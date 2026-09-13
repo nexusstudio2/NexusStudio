@@ -240,6 +240,166 @@ body {
   font-size: 12.5px;
 }
 
+/* SECTION LABELS (compartido) */
+.enc-section-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--terracotta);
+  margin-bottom: 8px;
+}
+
+.enc-section-title {
+  font-family: "Fraunces", serif;
+  font-weight: 500;
+  font-size: clamp(26px, 4vw, 34px);
+  color: var(--wood);
+  max-width: 520px;
+  margin-bottom: 44px;
+}
+
+/* CÓMO TRABAJAMOS — timeline horizontal */
+.enc-process {
+  padding: 64px 0;
+  background: var(--sand-deep);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.enc-process-track {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  position: relative;
+}
+
+.enc-process-track::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 6%;
+  right: 6%;
+  height: 1px;
+  background: var(--border);
+}
+
+.enc-process-step {
+  position: relative;
+  padding-right: 20px;
+}
+
+.enc-process-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--wood);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  position: relative;
+  z-index: 1;
+}
+
+.enc-process-step h4 {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--wood);
+  margin-bottom: 8px;
+}
+
+.enc-process-step p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* EVENTOS RECIENTES — filmstrip scroll horizontal */
+.enc-recent {
+  padding: 64px 0 20px;
+}
+
+.enc-filmstrip {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 0 24px 20px;
+  scroll-snap-type: x mandatory;
+}
+
+.enc-film-item {
+  flex: 0 0 240px;
+  scroll-snap-align: start;
+}
+
+.enc-film-photo {
+  width: 240px;
+  height: 300px;
+  border-radius: 4px;
+}
+
+.enc-film-caption {
+  margin-top: 10px;
+  font-size: 12.5px;
+  color: var(--muted);
+  max-width: 240px;
+}
+
+/* TESTIMONIOS — grid 2 columnas */
+.enc-testimonials {
+  padding: 20px 0 72px;
+}
+
+.enc-quote-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.enc-quote-box {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 26px 28px;
+  background: var(--card);
+}
+
+.enc-quote-box p {
+  font-family: "Fraunces", serif;
+  font-size: 16px;
+  color: var(--wood);
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.enc-quote-box span {
+  font-size: 12.5px;
+  color: var(--muted);
+}
+
+@media (max-width: 800px) {
+  .enc-process-track {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 32px;
+  }
+
+  .enc-process-track::before {
+    display: none;
+  }
+
+  .enc-quote-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .enc-process-track {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* CLOSING CTA */
 .enc-closing {
   background: var(--wood);

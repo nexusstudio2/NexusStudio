@@ -1,0 +1,411 @@
+:root {
+  --navy: #0d1540;
+  --navy-deep: #070b24;
+  --silver: #c9cee0;
+  --cream: #f5f4f0;
+  --gold: #9c8a5c;
+  --muted: #8891b0;
+  --border: rgba(201, 206, 224, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--navy-deep);
+  color: var(--cream);
+  font-family: "EB Garamond", serif;
+  line-height: 1.7;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* HERO / CANVAS */
+.bc-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 50% 20%, var(--navy) 0%, var(--navy-deep) 75%);
+}
+
+#bc-stars {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.bc-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 24px;
+}
+
+.bc-kicker {
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--silver);
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.bc-names {
+  font-family: "Marcellus", serif;
+  font-size: clamp(42px, 9vw, 76px);
+  color: var(--cream);
+  letter-spacing: 1px;
+  line-height: 1.1;
+}
+
+.bc-names span {
+  display: block;
+  font-family: "Cormorant", serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(22px, 4vw, 30px);
+  color: var(--gold);
+  margin: 10px 0;
+}
+
+.bc-date {
+  margin-top: 22px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: var(--silver);
+  text-transform: uppercase;
+}
+
+/* COUNTDOWN */
+.bc-countdown {
+  display: flex;
+  gap: 22px;
+  justify-content: center;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.bc-countdown-item {
+  min-width: 68px;
+}
+
+.bc-countdown-num {
+  font-family: "Marcellus", serif;
+  font-size: clamp(28px, 5vw, 40px);
+  color: var(--cream);
+}
+
+.bc-countdown-label {
+  font-size: 10.5px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.bc-scroll-hint {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--muted);
+  z-index: 2;
+}
+
+/* SECTIONS COMMON */
+.bc-section {
+  padding: 90px 0;
+}
+
+.bc-section-kicker {
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+
+.bc-section h2 {
+  text-align: center;
+  font-family: "Marcellus", serif;
+  font-size: clamp(28px, 4.5vw, 38px);
+  color: var(--cream);
+  margin-bottom: 56px;
+}
+
+/* TIMELINE */
+.bc-timeline {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+  padding-left: 28px;
+  border-left: 1px solid var(--border);
+}
+
+.bc-timeline-item {
+  position: relative;
+  margin-bottom: 44px;
+}
+
+.bc-timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.bc-timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -33px;
+  top: 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.bc-timeline-item h4 {
+  font-family: "Marcellus", serif;
+  font-size: 18px;
+  color: var(--cream);
+  margin-bottom: 6px;
+}
+
+.bc-timeline-item p {
+  font-size: 15px;
+  color: var(--silver);
+  opacity: 0.85;
+}
+
+/* EVENT TICKETS */
+.bc-tickets {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.bc-ticket {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 30px 24px;
+  text-align: center;
+  position: relative;
+  background: rgba(201, 206, 224, 0.03);
+}
+
+.bc-ticket::before,
+.bc-ticket::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: var(--navy-deep);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.bc-ticket::before {
+  left: -8px;
+}
+
+.bc-ticket::after {
+  right: -8px;
+}
+
+.bc-ticket-icon {
+  font-size: 26px;
+  margin-bottom: 14px;
+}
+
+.bc-ticket h4 {
+  font-family: "Marcellus", serif;
+  font-size: 17px;
+  color: var(--cream);
+  margin-bottom: 10px;
+}
+
+.bc-ticket p {
+  font-size: 13.5px;
+  color: var(--silver);
+  opacity: 0.8;
+  margin-bottom: 4px;
+}
+
+.bc-ticket .bc-ticket-time {
+  font-family: "Marcellus", serif;
+  color: var(--gold);
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+/* RSVP */
+.bc-rsvp {
+  background: var(--navy);
+}
+
+.bc-form {
+  max-width: 420px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bc-form label {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+  display: block;
+}
+
+.bc-form input,
+.bc-form select {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  color: var(--cream);
+  font-family: "EB Garamond", serif;
+  font-size: 16px;
+  padding: 8px 0;
+  outline: none;
+}
+
+.bc-form input:focus,
+.bc-form select:focus {
+  border-color: var(--gold);
+}
+
+.bc-form option {
+  background: var(--navy);
+}
+
+.bc-submit {
+  margin-top: 12px;
+  padding: 14px;
+  background: var(--gold);
+  color: var(--navy-deep);
+  border: none;
+  border-radius: 100px;
+  font-family: "EB Garamond", serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.bc-submit:hover {
+  opacity: 0.85;
+}
+
+/* UBICACIÓN + VESTIMENTA */
+.bc-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.bc-info-block h4 {
+  font-family: "Marcellus", serif;
+  font-size: 16px;
+  color: var(--gold);
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.bc-info-block p {
+  font-size: 14.5px;
+  color: var(--silver);
+  opacity: 0.85;
+  margin-bottom: 10px;
+}
+
+.bc-map-link {
+  font-size: 13.5px;
+  color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 2px;
+}
+
+.bc-dress-swatches {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.bc-swatch {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* CLOSING */
+.bc-closing {
+  text-align: center;
+  padding: 90px 0 60px;
+}
+
+.bc-closing p {
+  font-family: "Cormorant", serif;
+  font-style: italic;
+  font-size: clamp(20px, 3vw, 26px);
+  color: var(--silver);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.bc-closing-names {
+  margin-top: 18px;
+  font-family: "Marcellus", serif;
+  font-size: 22px;
+  color: var(--gold);
+}
+
+.bc-back {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.bc-back a {
+  font-size: 12px;
+  color: var(--muted);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.bc-back a:hover {
+  color: var(--gold);
+}
+
+@media (max-width: 560px) {
+  .bc-tickets,
+  .bc-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bc-countdown {
+    gap: 14px;
+  }
+
+  .bc-countdown-item {
+    min-width: 58px;
+  }
+}
