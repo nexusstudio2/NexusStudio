@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fonda El Nogal | Menú</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya:wght@600;700&family=Mulish:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles-restaurante.css" />
+  </head>
+  <body>
+    <!-- HERO -->
+    <section class="fn-hero">
+      <div class="fn-container">
+        <div class="fn-hero-mark">Fonda El Nogal</div>
+        <p>Comida mexicana tradicional, como la de casa, en el centro de Chihuahua.</p>
+
+        <div class="fn-special">
+          <div>
+            <div class="fn-special-tag">Especial de hoy</div>
+            <div class="fn-special-name" id="fn-special-name">—</div>
+          </div>
+          <div class="fn-special-price" id="fn-special-price">—</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENÚ -->
+    <section class="fn-menu-section">
+      <div class="fn-container">
+        <h2 class="fn-menu-title">Nuestro menú</h2>
+        <div class="fn-menu-layout">
+          <div class="fn-sidebar">
+            <button class="fn-sidebar-btn active" data-category="entradas">Entradas</button>
+            <button class="fn-sidebar-btn" data-category="fuertes">Platos Fuertes</button>
+            <button class="fn-sidebar-btn" data-category="antojitos">Antojitos</button>
+            <button class="fn-sidebar-btn" data-category="bebidas">Bebidas</button>
+            <button class="fn-sidebar-btn" data-category="postres">Postres</button>
+          </div>
+
+          <div>
+            <!-- ENTRADAS -->
+            <div class="fn-menu-category active" data-category="entradas">
+              <h3>Entradas</h3>
+              <div class="fn-menu-item">
+                <div class="fn-menu-item-info">
+                  <h4>Guacamole con Totopos</h4>
+                  <p>Preparado al momento en la mesa.</p>
+                </div>
+                <div class="fn-menu-item-price">$85</div>
+              </div>
+              <div class="fn-menu-item">
+                <div class="fn-menu-item-info">
+                  <h4>Queso Fundido</h4>
+                  <p>Con chorizo y tortillas de harina hechas a mano.</p>
+                </div>
+                <div class="fn-menu-item-price">$95</div>
+              </div>
+              <div class="fn-menu-item">
+                <div class="fn-menu-item-info">
+                  <h4>Sopa de Tortilla</h4>
+                  <p>Con aguacate, crema y queso panela.</p>
+                </div>
+                <div class="fn-menu-item-price">$75</div>
+              </div>
+            </div>
+
+            <!-- PLATOS FUERTES -->
+            <div class="fn-menu-category" data-category="fuertes">
+              <h3>Platos Fuertes</h3>
+              <div class="fn-menu-item">
+                <div class="fn-menu-item-info">
+                  <h4>Chiles en Nogada</h4>
+                  <p>De temporada, receta tradicional poblana.</p>
+                </div>
+                <div class="fn-menu-item-price">$220</div>
+              </div>
+              <div class="fn-menu-item">
+                <div class="fn-menu-item-info">
+                  <h4>Mole Poblano</h4>
+                  <p>Con pollo, arroz y tortillas de maíz.</p>
+                </div>
+                <div class="fn-menu-item-price">$180</div>
+              </div>
+              <div class="fn-menu-item">
+                <div class="fn-menu-item-info">
+                  <h4>Costillas BBQ</h4>
+                  <p>Costillas de cerdo bañadas en salsa BBQ casera.</p>
+                </div>
+                <div class="fn-menu-item-price">$210</div>
+              </div>
+              <div class="fn-menu-item">
+                <div class="fn-menu-item-info">
+                  <h4>Enchiladas Suizas</h4>
+                  <p>Bañadas en salsa verde con crema y queso gratinado.</p>
+                </div>
+                <div class="fn-menu-item-price">$150</div>
+              </div>
+            </div>
+
+            <!-- ANTOJITOS -->
+            <div class="fn-menu-category" data-category="antojitos">
+              <h3>Antojitos</h3>
+              <div class="fn-menu-item">
+                <div class="fn-menu-item-info">
+                  <h4>Tacos al Pastor (orden)</h4>
+                  <p>Con piña, cebolla y cilantro.</p>
+                </div>
+                <div class="fn-menu-item-price">$95</div>
+              </div>
+              <div class="fn-menu-item">
+                <div class="fn-menu-item-info">
+                  <h4>Quesadillas Surtidas</h4>
+                  <p>Flor de calabaza, champiñón y queso oaxaca.</p>
+                </div>
+                <div class="fn-menu-item-price">$85</div>
+              </div>
+              <div class="fn-menu-item">
+                <div class="fn-menu-item-info">
+                  <h4>Sope Trío</h4>
+                  <p>Frijol, lechuga, crema y queso, con tu guiso a elegir.</p>
+                </div>
+                <div class="fn-menu-item-price">$80</div>
+              </div>
+            </div>
+
+            <!-- BEBIDAS -->
+            <div class="fn-menu-category" data-category="bebidas">
+              <h3>Bebidas</h3>
+              <div class="fn-menu-item">
+                <div class="fn-menu-item-info">
+                  <h4>Agua de Horchata</h4>
+                  <p>Preparada en casa todos los días.</p>
+                </div>
+                <div class="fn-menu-item-price">$35</div>
+              </div>
+              <div class="fn-menu-item">
+                <div class="fn-menu-item-info">
+                  <h4>Michelada</h4>
+                  <p>Con cerveza clara y sal de gusano.</p>
+                </div>
+                <div class="fn-menu-item-price">$60</div>
+              </div>
+              <div class="fn-menu-item">
+                <div class="fn-menu-item-info">
+                  <h4>Café de Olla</h4>
+                  <p>Con canela y piloncillo, servido caliente.</p>
+                </div>
+                <div class="fn-menu-item-price">$30</div>
+              </div>
+            </div>
+
+            <!-- POSTRES -->
+            <div class="fn-menu-category" data-category="postres">
+              <h3>Postres</h3>
+              <div class="fn-menu-item">
+                <div class="fn-menu-item-info">
+                  <h4>Flan Napolitano</h4>
+                  <p>Receta de la casa, con caramelo.</p>
+                </div>
+                <div class="fn-menu-item-price">$55</div>
+              </div>
+              <div class="fn-menu-item">
+                <div class="fn-menu-item-info">
+                  <h4>Pastel de Tres Leches</h4>
+                  <p>Rebanada individual, con canela.</p>
+                </div>
+                <div class="fn-menu-item-price">$60</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESERVACIÓN -->
+    <section class="fn-reserve">
+      <div class="fn-container">
+        <div class="fn-reserve-grid">
+          <div class="fn-reserve-text">
+            <h2>Reserva tu mesa</h2>
+            <p>
+              Déjanos tus datos y te confirmamos la disponibilidad por
+              WhatsApp.
+            </p>
+          </div>
+          <form id="fn-form">
+            <div class="fn-form-row">
+              <div class="fn-form-group">
+                <label for="fn-nombre">Nombre</label>
+                <input type="text" id="fn-nombre" required />
+              </div>
+              <div class="fn-form-group">
+                <label for="fn-telefono">Teléfono</label>
+                <input type="tel" id="fn-telefono" required />
+              </div>
+            </div>
+            <div class="fn-form-row">
+              <div class="fn-form-group">
+                <label for="fn-personas">Personas</label>
+                <select id="fn-personas">
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6+</option>
+                </select>
+              </div>
+              <div class="fn-form-group">
+                <label for="fn-fecha">Fecha</label>
+                <input type="date" id="fn-fecha" required />
+              </div>
+            </div>
+            <div class="fn-form-group">
+              <label for="fn-hora">Hora</label>
+              <select id="fn-hora">
+                <option>1:00 PM</option>
+                <option>2:00 PM</option>
+                <option>3:00 PM</option>
+                <option>7:00 PM</option>
+                <option>8:00 PM</option>
+              </select>
+            </div>
+            <button type="submit" class="fn-btn fn-btn-primary">
+              Reservar mesa
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFO BAR -->
+    <div class="fn-container">
+      <div class="fn-info-bar">
+        <span><strong>Horario</strong> · 1:00 PM - 10:00 PM todos los días</span>
+        <span><strong>Ubicación</strong> · Av. Universidad 1420, Chihuahua</span>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="fn-container">
+      <footer class="fn-footer">
+        <a href="../../../index-servicios.html">← Volver a Nexus Studio</a>
+      </footer>
+    </div>
+
+    <script src="script-restaurante.js"></script>
+  </body>
+</html>
