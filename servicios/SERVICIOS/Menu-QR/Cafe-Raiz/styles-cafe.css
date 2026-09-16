@@ -1,0 +1,259 @@
+:root {
+  --cream: #f5ede4;
+  --espresso: #3c2a21;
+  --forest: #4a5d3a;
+  --mustard: #d9a441;
+  --muted: #7a6a5c;
+  --border: #e3d5c4;
+  --card: #fffbf6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--cream);
+  color: var(--espresso);
+  font-family: "Manrope", sans-serif;
+  line-height: 1.6;
+}
+
+.cr-container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* HERO */
+.cr-hero {
+  padding: 52px 0 32px;
+  text-align: center;
+}
+
+.cr-hero-mark {
+  font-family: "Lora", serif;
+  font-weight: 600;
+  font-size: 28px;
+  color: var(--espresso);
+  margin-bottom: 10px;
+}
+
+.cr-hero p {
+  color: var(--muted);
+  font-size: 14.5px;
+  max-width: 340px;
+  margin: 0 auto;
+}
+
+.cr-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  padding: 8px 16px;
+  border-radius: 100px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.cr-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.cr-status-dot.open {
+  background: var(--forest);
+}
+
+.cr-status-dot.closed {
+  background: #b04b3a;
+}
+
+/* NAV DE CATEGORÍAS (sticky, scrollspy) */
+.cr-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(245, 237, 228, 0.94);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 0;
+}
+
+.cr-nav-row {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 0 4px;
+}
+
+.cr-nav-chip {
+  flex-shrink: 0;
+  padding: 8px 16px;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.cr-nav-chip.active {
+  background: var(--espresso);
+  border-color: var(--espresso);
+  color: var(--cream);
+}
+
+/* SECCIONES DE MENÚ */
+.cr-menu-section {
+  padding: 40px 0 12px;
+  scroll-margin-top: 64px;
+}
+
+.cr-menu-section h2 {
+  font-family: "Lora", serif;
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.cr-menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.cr-menu-item:last-child {
+  border-bottom: none;
+}
+
+.cr-menu-item-info h4 {
+  font-size: 15.5px;
+  font-weight: 700;
+  margin-bottom: 3px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cr-menu-item-info p {
+  font-size: 13px;
+  color: var(--muted);
+  max-width: 340px;
+}
+
+.cr-menu-item-price {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--mustard);
+  white-space: nowrap;
+}
+
+.cr-badge {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #fff;
+  background: var(--forest);
+  padding: 2px 8px;
+  border-radius: 100px;
+}
+
+/* INFO: WIFI + HORARIOS */
+.cr-info {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 26px 24px;
+  margin: 40px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.cr-info-block h4 {
+  font-family: "Lora", serif;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.cr-wifi-value {
+  font-size: 14px;
+  font-weight: 700;
+  background: var(--cream);
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  padding: 8px 12px;
+  display: inline-block;
+}
+
+.cr-hours-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--muted);
+  padding: 3px 0;
+}
+
+/* CIERRE */
+.cr-closing {
+  text-align: center;
+  padding: 40px 0 56px;
+}
+
+.cr-closing p {
+  font-family: "Lora", serif;
+  font-style: italic;
+  font-size: 17px;
+  color: var(--espresso);
+  margin-bottom: 18px;
+}
+
+.cr-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 26px;
+  border-radius: 100px;
+  background: var(--espresso);
+  color: var(--cream);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cr-back {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.cr-back a {
+  font-size: 12px;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.cr-back a:hover {
+  color: var(--forest);
+}
+
+@media (max-width: 480px) {
+  .cr-info {
+    grid-template-columns: 1fr;
+  }
+}

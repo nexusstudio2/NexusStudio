@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cuervo Barbería</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Barlow:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles-barberia.css" />
+  </head>
+  <body>
+    <div class="cb-pole-stripe"></div>
+
+    <!-- HERO -->
+    <section class="cb-hero">
+      <div class="cb-container">
+        <div class="cb-hero-tag">Barbería tradicional · Chihuahua</div>
+        <h1>CUERVO<br /><span>BARBERÍA</span></h1>
+        <p>
+          Cortes clásicos, afeitado a navaja y buena plática. Sin cita
+          previa forzosa, aunque tu horario favorito se llena rápido.
+        </p>
+        <div class="cb-hero-actions">
+          <a href="#reserva" class="cb-btn cb-btn-primary">Reservar cita</a>
+          <a href="#lookbook" class="cb-btn cb-btn-ghost">Ver cortes</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="cb-pole-stripe"></div>
+
+    <!-- MENÚ DE PRECIOS -->
+    <section class="cb-section">
+      <div class="cb-container">
+        <div class="cb-section-label">Servicios</div>
+        <h2 class="cb-section-title">Menú de precios</h2>
+        <div class="cb-price-list">
+          <div class="cb-price-row">
+            <span class="cb-price-name">Corte Clásico</span>
+            <span class="cb-price-dots"></span>
+            <span class="cb-price-amount">$150</span>
+          </div>
+          <div class="cb-price-row">
+            <span class="cb-price-name">Corte + Barba</span>
+            <span class="cb-price-dots"></span>
+            <span class="cb-price-amount">$220</span>
+          </div>
+          <div class="cb-price-row">
+            <span class="cb-price-name">Afeitado Tradicional</span>
+            <span class="cb-price-dots"></span>
+            <span class="cb-price-amount">$180</span>
+          </div>
+          <div class="cb-price-row">
+            <span class="cb-price-name">Diseño de Barba</span>
+            <span class="cb-price-dots"></span>
+            <span class="cb-price-amount">$150</span>
+          </div>
+          <div class="cb-price-row">
+            <span class="cb-price-name">Corte Niño</span>
+            <span class="cb-price-dots"></span>
+            <span class="cb-price-amount">$120</span>
+          </div>
+          <div class="cb-price-row">
+            <span class="cb-price-name">Coloración</span>
+            <span class="cb-price-dots"></span>
+            <span class="cb-price-amount">$350</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOOKBOOK -->
+    <section class="cb-section" id="lookbook" style="padding-top: 0">
+      <div class="cb-container">
+        <div class="cb-section-label">Lookbook</div>
+        <h2 class="cb-section-title">Estilos disponibles</h2>
+      </div>
+      <div class="cb-lookbook-grid">
+        <div class="cb-lookbook-item" style="background: linear-gradient(135deg, #6b1e23, #1a1a1a)">
+          <span>Fade Clásico</span>
+        </div>
+        <div class="cb-lookbook-item" style="background: linear-gradient(135deg, #a9812e, #1a1a1a)">
+          <span>Pompadour</span>
+        </div>
+        <div class="cb-lookbook-item" style="background: linear-gradient(135deg, #3a3a3a, #1a1a1a)">
+          <span>Buzz Cut</span>
+        </div>
+        <div class="cb-lookbook-item" style="background: linear-gradient(135deg, #531418, #1a1a1a)">
+          <span>Undercut</span>
+        </div>
+        <div class="cb-lookbook-item" style="background: linear-gradient(135deg, #7a6a45, #1a1a1a)">
+          <span>Barba Completa</span>
+        </div>
+        <div class="cb-lookbook-item" style="background: linear-gradient(135deg, #4a4a4a, #1a1a1a)">
+          <span>Crew Cut</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESERVA INTERACTIVA -->
+    <section class="cb-section cb-booking" id="reserva">
+      <div class="cb-container">
+        <div class="cb-section-label">Reserva</div>
+        <h2 class="cb-section-title">Elige tu horario</h2>
+
+        <div class="cb-booking-group">
+          <div class="cb-booking-label">Día</div>
+          <div class="cb-option-row">
+            <button class="cb-option-btn cb-day-btn" data-day="Lunes">Lun</button>
+            <button class="cb-option-btn cb-day-btn" data-day="Martes">Mar</button>
+            <button class="cb-option-btn cb-day-btn" data-day="Miércoles">Mié</button>
+            <button class="cb-option-btn cb-day-btn" data-day="Jueves">Jue</button>
+            <button class="cb-option-btn cb-day-btn" data-day="Viernes">Vie</button>
+            <button class="cb-option-btn cb-day-btn" data-day="Sábado">Sáb</button>
+          </div>
+        </div>
+
+        <div class="cb-booking-group">
+          <div class="cb-booking-label">Horario</div>
+          <div class="cb-option-row">
+            <button class="cb-option-btn cb-time-btn" data-time="10:00 AM">10:00 AM</button>
+            <button class="cb-option-btn cb-time-btn" data-time="12:00 PM">12:00 PM</button>
+            <button class="cb-option-btn cb-time-btn" data-time="2:00 PM">2:00 PM</button>
+            <button class="cb-option-btn cb-time-btn" data-time="4:00 PM">4:00 PM</button>
+            <button class="cb-option-btn cb-time-btn" data-time="6:00 PM">6:00 PM</button>
+          </div>
+        </div>
+
+        <p class="cb-booking-summary" id="cb-booking-summary"></p>
+
+        <button class="cb-btn cb-btn-primary" id="cb-book-btn">
+          Reservar por WhatsApp
+        </button>
+      </div>
+    </section>
+
+    <!-- BARBEROS -->
+    <section class="cb-section">
+      <div class="cb-container">
+        <div class="cb-section-label">Equipo</div>
+        <h2 class="cb-section-title">Nuestros barberos</h2>
+        <div class="cb-team-grid">
+          <div class="cb-team-card">
+            <div class="cb-team-avatar" style="background: linear-gradient(135deg, #6b1e23, #a9812e)"></div>
+            <h4>Toño Cuervo</h4>
+            <span>Fades y diseños</span>
+          </div>
+          <div class="cb-team-card">
+            <div class="cb-team-avatar" style="background: linear-gradient(135deg, #a9812e, #1a1a1a)"></div>
+            <h4>Beto Salas</h4>
+            <span>Barba y afeitado tradicional</span>
+          </div>
+          <div class="cb-team-card">
+            <div class="cb-team-avatar" style="background: linear-gradient(135deg, #3a3a3a, #6b1e23)"></div>
+            <h4>Iker Vega</h4>
+            <span>Cortes clásicos</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TICKER DE TESTIMONIOS -->
+    <div class="cb-ticker-wrap">
+      <div class="cb-ticker-track">
+        <div class="cb-ticker-item"><span>★★★★★</span> "El mejor fade que me han hecho en Chihuahua" — Raúl M.</div>
+        <div class="cb-ticker-item"><span>★★★★★</span> "Toño se toma su tiempo, no batalla" — Iván C.</div>
+        <div class="cb-ticker-item"><span>★★★★★</span> "El afeitado tradicional es otro nivel" — Diego F.</div>
+        <div class="cb-ticker-item"><span>★★★★★</span> "Ambiente relajado, buena música" — Sergio T.</div>
+        <div class="cb-ticker-item"><span>★★★★★</span> "El mejor fade que me han hecho en Chihuahua" — Raúl M.</div>
+        <div class="cb-ticker-item"><span>★★★★★</span> "Toño se toma su tiempo, no batalla" — Iván C.</div>
+        <div class="cb-ticker-item"><span>★★★★★</span> "El afeitado tradicional es otro nivel" — Diego F.</div>
+        <div class="cb-ticker-item"><span>★★★★★</span> "Ambiente relajado, buena música" — Sergio T.</div>
+      </div>
+    </div>
+
+    <!-- CIERRE -->
+    <section class="cb-closing">
+      <div class="cb-container">
+        <h2>Se te está creciendo</h2>
+        <p>Reserva tu corte antes de que se llenen los horarios de esta semana.</p>
+        <a
+          href="https://wa.me/526143771797?text=Hola%20Cuervo%20Barber%C3%ADa%2C%20quiero%20reservar%20una%20cita"
+          class="cb-btn cb-btn-primary"
+          target="_blank"
+          rel="noopener"
+          >Reservar por WhatsApp</a
+        >
+      </div>
+    </section>
+
+    <div class="cb-container">
+      <footer class="cb-footer">
+        <span>Chihuahua, México</span>
+        <a href="../../../index-servicios.html">Volver a Nexus Studio</a>
+      </footer>
+    </div>
+
+    <script src="script-barberia.js"></script>
+  </body>
+</html>

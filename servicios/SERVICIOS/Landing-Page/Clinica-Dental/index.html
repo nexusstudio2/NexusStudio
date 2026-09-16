@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dental Norte | Clínica Dental Integral</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles-dental.css" />
+  </head>
+  <body>
+    <div class="dn-container">
+      <!-- NAV -->
+      <nav class="dn-nav">
+        <div class="dn-logo">Dental<span>Norte</span></div>
+        <a
+          href="https://wa.me/526143771797?text=Hola%20Dental%20Norte%2C%20quiero%20agendar%20una%20cita"
+          class="dn-nav-cta"
+          target="_blank"
+          rel="noopener"
+          >Agendar cita →</a
+        >
+      </nav>
+
+      <!-- HERO SPLIT -->
+      <section class="dn-hero">
+        <div>
+          <div class="dn-hero-tag">Citas disponibles esta semana</div>
+          <h1>Cuidado dental integral, cerca de ti</h1>
+          <p>
+            Limpieza, ortodoncia, implantes y urgencias dentales en
+            Chihuahua, con equipo certificado y atención personalizada.
+          </p>
+          <div class="dn-hero-points">
+            <div class="dn-hero-point">Atención de urgencias el mismo día</div>
+            <div class="dn-hero-point">Planes de pago para tratamientos largos</div>
+            <div class="dn-hero-point">Aceptamos la mayoría de seguros dentales</div>
+          </div>
+        </div>
+
+        <div class="dn-widget">
+          <h3>Agenda tu cita</h3>
+          <p class="dn-widget-sub">Te confirmamos por WhatsApp en minutos</p>
+          <form id="dn-form">
+            <div class="dn-form-group">
+              <label for="dn-nombre">Nombre</label>
+              <input type="text" id="dn-nombre" required />
+            </div>
+            <div class="dn-form-group">
+              <label for="dn-telefono">Teléfono</label>
+              <input type="tel" id="dn-telefono" required />
+            </div>
+            <div class="dn-form-group">
+              <label for="dn-servicio">Servicio de interés</label>
+              <select id="dn-servicio">
+                <option value="">Selecciona una opción</option>
+                <option>Limpieza dental</option>
+                <option>Blanqueamiento</option>
+                <option>Ortodoncia</option>
+                <option>Implantes</option>
+                <option>Urgencia dental</option>
+              </select>
+            </div>
+            <button type="submit" class="dn-btn dn-btn-primary">
+              Agendar mi cita
+            </button>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <!-- TRUST BAR -->
+    <section class="dn-trust">
+      <div class="dn-container">
+        <div class="dn-trust-row">
+          <span><strong>15 años</strong> de experiencia</span>
+          <span><strong>+8,000</strong> pacientes atendidos</span>
+          <span>Aceptamos la mayoría de <strong>seguros dentales</strong></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="dn-section">
+      <div class="dn-container">
+        <div class="dn-section-label">Servicios</div>
+        <h2 class="dn-section-title">Tratamientos disponibles</h2>
+        <div class="dn-services-grid">
+          <div class="dn-service-card">
+            <h4>Limpieza dental</h4>
+            <p>Profilaxis completa con revisión general.</p>
+            <div class="dn-service-price">Desde $450 MXN</div>
+          </div>
+          <div class="dn-service-card">
+            <h4>Blanqueamiento</h4>
+            <p>Blanqueamiento profesional en consultorio.</p>
+            <div class="dn-service-price">Desde $1,800 MXN</div>
+          </div>
+          <div class="dn-service-card">
+            <h4>Ortodoncia</h4>
+            <p>Brackets metálicos o estéticos, con planes de pago.</p>
+            <div class="dn-service-price">Desde $12,000 MXN</div>
+          </div>
+          <div class="dn-service-card">
+            <h4>Implantes dentales</h4>
+            <p>Implante de titanio con corona incluida.</p>
+            <div class="dn-service-price">Desde $8,500 MXN</div>
+          </div>
+          <div class="dn-service-card">
+            <h4>Urgencias dentales</h4>
+            <p>Atención el mismo día para dolor o emergencias.</p>
+            <div class="dn-service-price">Desde $600 MXN</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARADOR ANTES/DESPUÉS -->
+    <section class="dn-section" style="background: var(--card)">
+      <div class="dn-container">
+        <div class="dn-section-label">Resultados</div>
+        <h2 class="dn-section-title" style="margin-left: auto; margin-right: auto; text-align: center;">
+          Desliza para ver la diferencia
+        </h2>
+        <div class="dn-compare-wrap">
+          <div class="dn-compare" id="dn-compare">
+            <div class="dn-compare-after">
+              <div class="dn-compare-label dn-compare-label-after">Después</div>
+            </div>
+            <div class="dn-compare-before" id="dn-compare-before">
+              <div class="dn-compare-before-inner"></div>
+              <div class="dn-compare-label dn-compare-label-before">Antes</div>
+            </div>
+            <div class="dn-compare-handle" id="dn-compare-handle"></div>
+          </div>
+          <p class="dn-compare-hint">Arrastra el círculo para comparar</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EQUIPO -->
+    <section class="dn-section">
+      <div class="dn-container">
+        <div class="dn-section-label">Equipo</div>
+        <h2 class="dn-section-title">Quién te va a atender</h2>
+        <div class="dn-team-grid">
+          <div class="dn-team-card">
+            <div
+              class="dn-team-avatar"
+              style="background: linear-gradient(135deg, #2f8f7a, #5fa8d3)"
+            ></div>
+            <h4>Dr. Emilio Rangel</h4>
+            <span>Odontología general</span>
+          </div>
+          <div class="dn-team-card">
+            <div
+              class="dn-team-avatar"
+              style="background: linear-gradient(135deg, #5fa8d3, #2f8f7a)"
+            ></div>
+            <h4>Dra. Paulina Solís</h4>
+            <span>Ortodoncia</span>
+          </div>
+          <div class="dn-team-card">
+            <div
+              class="dn-team-avatar"
+              style="background: linear-gradient(135deg, #256f5f, #5fa8d3)"
+            ></div>
+            <h4>Dr. Iván Márquez</h4>
+            <span>Implantología</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="dn-section" style="background: var(--card)">
+      <div class="dn-container">
+        <div class="dn-section-label">Preguntas frecuentes</div>
+        <h2 class="dn-section-title">Antes de agendar</h2>
+
+        <div class="dn-faq-item open">
+          <button class="dn-faq-head">
+            ¿Aceptan seguros dentales?
+            <span class="dn-faq-icon">+</span>
+          </button>
+          <div class="dn-faq-body">
+            <p>
+              Trabajamos con la mayoría de las aseguradoras dentales en
+              México. Escríbenos con el nombre de tu aseguradora para
+              confirmar cobertura antes de tu cita.
+            </p>
+          </div>
+        </div>
+
+        <div class="dn-faq-item">
+          <button class="dn-faq-head">
+            ¿Manejan urgencias el mismo día?
+            <span class="dn-faq-icon">+</span>
+          </button>
+          <div class="dn-faq-body">
+            <p>
+              Sí, reservamos espacios diarios para urgencias. Llama o escribe
+              por WhatsApp y te damos el primer horario disponible.
+            </p>
+          </div>
+        </div>
+
+        <div class="dn-faq-item">
+          <button class="dn-faq-head">
+            ¿Tienen planes de pago para ortodoncia?
+            <span class="dn-faq-icon">+</span>
+          </button>
+          <div class="dn-faq-body">
+            <p>
+              Sí, dividimos el tratamiento en mensualidades sin intereses
+              durante todo el proceso de ortodoncia.
+            </p>
+          </div>
+        </div>
+
+        <div class="dn-faq-item">
+          <button class="dn-faq-head">
+            ¿Cuánto dura una limpieza dental?
+            <span class="dn-faq-icon">+</span>
+          </button>
+          <div class="dn-faq-body">
+            <p>
+              Entre 30 y 45 minutos, incluyendo revisión general y
+              recomendaciones de cuidado.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CIERRE -->
+    <section class="dn-closing">
+      <div class="dn-container">
+        <h2>Tu sonrisa no debería esperar</h2>
+        <p>Agenda tu cita hoy y te confirmamos el mismo día por WhatsApp.</p>
+        <a
+          href="https://wa.me/526143771797?text=Hola%20Dental%20Norte%2C%20quiero%20agendar%20una%20cita"
+          class="dn-btn dn-btn-primary"
+          target="_blank"
+          rel="noopener"
+          style="display: inline-flex"
+          >Agendar por WhatsApp</a
+        >
+      </div>
+    </section>
+
+    <div class="dn-container">
+      <footer class="dn-footer">
+        <span>Chihuahua, México</span>
+        <a href="../../../index-servicios.html">Volver a Nexus Studio</a>
+      </footer>
+    </div>
+
+    <script src="script-dental.js"></script>
+  </body>
+</html>
