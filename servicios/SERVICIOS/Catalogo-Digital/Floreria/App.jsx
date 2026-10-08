@@ -65,16 +65,28 @@ function Catalogo() {
 }
 
 export default function App() {
+  const [menuAbierto, setMenuAbierto] = useState(false);
+
   return (
     <>
       <header className="wrap barra">
         <a className="logo" href="#">
           {negocio.nombre}
         </a>
-        <nav>
-          <a href="#catalogo">Catálogo</a>
-          <a href="#pedidos">Cómo pedir</a>
-          <a href="#contacto">Contacto</a>
+
+        {/* Botón de hamburguesa para móviles */}
+        <button
+          className="menu-hamburguesa"
+          onClick={() => setMenuAbierto(!menuAbierto)}
+          aria-label="Menú de navegación"
+        >
+          {menuAbierto ? "✕" : "☰"}
+        </button>
+
+        <nav className={menuAbierto ? "abierto" : ""}>
+          <a href="#catalogo" onClick={() => setMenuAbierto(false)}>Catálogo</a>
+          <a href="#pedidos" onClick={() => setMenuAbierto(false)}>Cómo pedir</a>
+          <a href="#contacto" onClick={() => setMenuAbierto(false)}>Contacto</a>
         </nav>
       </header>
 

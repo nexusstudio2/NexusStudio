@@ -51,13 +51,17 @@ blockquote,
   font-weight: 500;
 }
 
-/* BARRA */
+/* BARRA (Modificada para mantenerse visible al scrollear) */
 .barra {
+  position: sticky;
+  top: 0;
+  background: var(--paper);
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -82,6 +86,16 @@ blockquote,
   color: var(--ink);
   text-decoration: underline;
   text-underline-offset: 4px;
+}
+
+/* BOTÓN DE HAMBURGUESA */
+.menu-hamburguesa {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: var(--ink);
 }
 
 /* HERO */
@@ -455,11 +469,31 @@ blockquote,
   }
 }
 
-@media (max-width: 560px) {
-  .barra nav {
-    gap: 16px;
+@media (max-width: 768px) {
+  .menu-hamburguesa {
+    display: block;
   }
 
+  .barra nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--paper);
+    flex-direction: column;
+    padding: 24px;
+    gap: 20px;
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  }
+
+  .barra nav.abierto {
+    display: flex;
+  }
+}
+
+@media (max-width: 560px) {
   .datos {
     grid-template-columns: 1fr;
     border-top: none;
@@ -470,7 +504,7 @@ blockquote,
     padding: 12px 0;
   }
 
-    .rejilla {
+  .rejilla {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px 12px;
   }
