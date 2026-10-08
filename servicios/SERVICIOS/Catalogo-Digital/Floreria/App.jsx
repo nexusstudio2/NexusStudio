@@ -1,126 +1,172 @@
-import CatalogoGrid from "../../../../src/catalogo/CatalogoGrid.jsx";
+import { useState } from "react";
 import { categorias, productos } from "./productos.js";
 import {
+  foto,
   negocio,
   waLink,
   hero,
-  proceso,
-  historias,
+  datos,
+  pasos,
+  historia,
   testimonios,
   cierre,
 } from "./config.js";
 
-export default function App() {
+function Catalogo() {
+  const [activa, setActiva] = useState("todo");
+  const visibles =
+    activa === "todo"
+      ? productos
+      : productos.filter((p) => p.categoria === activa);
+
   return (
-    <>
-      {/* HERO */}
-      <section className="mf-hero">
-        <div className="container">
-          <div className="mf-mark">
-            <span></span> {negocio.nombre}
+    <section className="catalogo" id="catalogo">
+      <div className="wrap">
+        <div className="catalogo-cab">
+          <h2>Catálogo</h2>
+          <div className="tabs" role="tablist">
+            {categorias.map((c) => (
+              <button
+                key={c.id}
+                type="button"
+                className={activa === c.id ? "on" : ""}
+                onClick={() => setActiva(c.id)}
+              >
+                {c.nombre}
+              </button>
+            ))}
           </div>
-          <h1>{hero.titulo}</h1>
-          <p>{hero.texto}</p>
-          <div className="mf-hero-actions">
-            <a href="#catalogo" className="mf-btn mf-btn-primary">
-              Ver arreglos ↓
-            </a>
+        </div>
+
+        <div className="rejilla">
+          {visibles.map((p) => (
             <a
-              href={waLink(hero.mensajeWa)}
-              className="mf-btn mf-btn-ghost"
+              key={p.nombre}
+              className="pieza"
+              href={waLink(`Hola, me interesa el arreglo "${p.nombre}"`)}
               target="_blank"
               rel="noopener"
             >
-              Pedir por WhatsApp
+              <div className="pieza-foto">
+                <img src={foto(p.foto, 700)} alt={p.alt} loading="lazy" />
+              </div>
+              <div className="pieza-datos">
+                <span className="pieza-nombre">{p.nombre}</span>
+                <span className="pieza-precio">
+                  ${p.precio.toLocaleString("es-MX")}
+                </span>
+              </div>
             </a>
-          </div>
-        </div>
-      </section>
-
-      {/* FILTROS + MOSAICO */}
-      <CatalogoGrid categorias={categorias} productos={productos} />
-
-      {/* CÓMO PEDIR */}
-      <section className="mf-process">
-        <div className="container">
-          <div className="mf-process-inner">
-            <div className="mf-process-head">
-              <span>{proceso.etiqueta}</span>
-              <h2>{proceso.titulo}</h2>
-            </div>
-            <div className="mf-process-line">
-              {proceso.pasos.map((paso) => (
-                <div className="mf-process-step" key={paso.titulo}>
-                  <div className="mf-process-dot"></div>
-                  <div>
-                    <h4>{paso.titulo}</h4>
-                    <p>{paso.texto}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* EDITORIAL */}
-      <section className="mf-editorial">
-        <div className="container">
-          <div className="mf-editorial-head">
-            <span>{historias.etiqueta}</span>
-            <h2>{historias.titulo}</h2>
-          </div>
-
-          {historias.lista.map((h) => (
-            <div className="mf-story" key={h.titulo}>
-              <div className="mf-story-visual" style={{ background: h.fondo }}>
-                {h.emoji}
-              </div>
-              <div>
-                <h3>{h.titulo}</h3>
-                <p>{h.texto}</p>
-              </div>
-            </div>
           ))}
         </div>
-      </section>
+      </div>
+    </section>
+  );
+}
 
-      {/* TESTIMONIOS */}
-      <section className="mf-testimonials">
-        <div className="container">
-          <div className="mf-editorial-head">
-            <span>{testimonios.etiqueta}</span>
-            <h2>{testimonios.titulo}</h2>
-          </div>
+export default function App() {
+  return (
+    <>
+      <header className="wrap barra">
+        <a className="logo" href="#">
+          {negocio.nombre}
+        </a>
+        <nav>
+          <a href="#catalogo">Catálogo</a>
+          <a href="#pedidos">Cómo pedir</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+      </header>
 
-          {testimonios.lista.map((t) => (
-            <div className={"mf-quote mf-quote-" + t.lado} key={t.autor}>
-              <p>"{t.texto}"</p>
-              <span>— {t.autor}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* CIERRE */}
-      <section className="mf-closing">
-        <div className="container">
-          <h2>{cierre.titulo}</h2>
-          <p>{cierre.texto}</p>
+      <section className="wrap hero">
+        <div className="hero-texto">
+          <h1>
+            {hero.linea1} <em>{hero.linea2}</em>
+          </h1>
+          <p>{hero.texto}</p>
           <a
-            href={waLink(cierre.mensajeWa)}
-            className="mf-btn mf-btn-primary"
+            className="enlace"
+            href={waLink(hero.mensajeWa)}
             target="_blank"
             rel="noopener"
           >
-            Pedir mi arreglo →
+            Pedir por WhatsApp
+          </a>
+        </div>
+        <figure className="hero-foto">
+          <img src={hero.foto} alt="Flores rosas y blancas de cerca" />
+          <figcaption>{hero.pie}</figcaption>
+        </figure>
+      </section>
+
+      <div className="wrap datos">
+        {datos.map(([k, v]) => (
+          <div key={k}>
+            <span>{k}</span>
+            <strong>{v}</strong>
+          </div>
+        ))}
+      </div>
+
+      <Catalogo />
+
+      <section className="wrap pedidos" id="pedidos">
+        <h2>Cómo pedir</h2>
+        <ol>
+          {pasos.map((p, i) => (
+            <li key={p.titulo}>
+              <span className="num">0{i + 1}</span>
+              <div>
+                <h3>{p.titulo}</h3>
+                <p>{p.texto}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section className="historia">
+        <div className="wrap historia-grid">
+          <img src={historia.foto} alt="Persona sosteniendo un ramo de flores" />
+          <div>
+            <blockquote>{historia.cita}</blockquote>
+            <p>{historia.texto}</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="wrap voces">
+        {testimonios.map((t) => (
+          <figure key={t.autor}>
+            <blockquote>{t.texto}</blockquote>
+            <figcaption>
+              {t.autor}, <span>{t.nota}</span>
+            </figcaption>
+          </figure>
+        ))}
+      </section>
+
+      <section className="cierre" id="contacto">
+        <div className="wrap cierre-grid">
+          <div>
+            <h2>{cierre.titulo}</h2>
+            <p>{cierre.texto}</p>
+          </div>
+          <a
+            className="cierre-tel"
+            href={waLink(cierre.mensajeWa)}
+            target="_blank"
+            rel="noopener"
+          >
+            {negocio.telefono}
           </a>
         </div>
       </section>
 
-      <div className="mf-back">
-        <a href={negocio.volverA}>← Volver a Nexus Studio</a>
-      </div>
+      <footer className="wrap pie">
+        <a href={negocio.volverA}>Volver a Nexus Studio</a>
+        <span>Chihuahua, Chih.</span>
+      </footer>
     </>
   );
 }
