@@ -2,6 +2,8 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { resolve } from "path";
 
+const base = "servicios/SERVICIOS/Catalogo-Digital";
+
 export default defineConfig({
   plugins: [react()],
   base: "./",
@@ -10,12 +12,14 @@ export default defineConfig({
       input: {
         // Cada demo migrada a React se agrega aquí con una línea más.
         floreria: resolve(
-          __dirname,
-          "servicios/SERVICIOS/Catalogo-Digital/Floreria/index.html",
-        ),
+          import.meta.dirname, 
+          `${base}/Floreria/index.html`),
         pasteleria: resolve(
+          import.meta.dirname, 
+          `${base}/Pasteleria/index.html`),
+        encinar: resolve(
           import.meta.dirname,
-          "servicios/SERVICIOS/Catalogo-Digital/Pasteleria/index.html",
+          `${base}/Decoracion-Mobiliario/index.html`,
         ),
       },
     },
