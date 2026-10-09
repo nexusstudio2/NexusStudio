@@ -1,0 +1,385 @@
+:root {
+  --papel: #efeeea;
+  --tinta: #111111;
+  --mute: #6b6b66;
+  --linea: rgba(17, 17, 17, 0.18);
+  --rojo: #c2371f;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--papel);
+  color: var(--tinta);
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.06);
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+blockquote p,
+.intro p {
+  font-family: "Libre Caslon Display", serif;
+  font-weight: 400;
+}
+
+.wrap {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.meta {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12.5px;
+  color: var(--mute);
+  letter-spacing: 0.02em;
+}
+
+/* PORTADA */
+.portada {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: flex-end;
+  color: #f2f1ed;
+  overflow: hidden;
+}
+
+.portada-foto {
+  position: absolute;
+  inset: 0;
+}
+
+.portada-vel {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(10, 10, 10, 0.88) 0%,
+    rgba(10, 10, 10, 0.35) 50%,
+    rgba(10, 10, 10, 0.1) 100%
+  );
+}
+
+.portada-in {
+  position: relative;
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 24px 32px;
+}
+
+.portada .meta {
+  color: rgba(242, 241, 237, 0.8);
+}
+
+.portada h1 {
+  font-size: clamp(56px, 13vw, 128px);
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  margin: 8px 0 28px;
+}
+
+.acciones {
+  display: grid;
+  gap: 10px;
+  max-width: 420px;
+}
+
+.accion {
+  display: block;
+  padding: 15px 18px;
+  border: 1px solid rgba(242, 241, 237, 0.55);
+  text-decoration: none;
+  font-weight: 500;
+  transition:
+    background 0.15s,
+    color 0.15s,
+    border-color 0.15s;
+}
+
+.accion:hover {
+  background: #f2f1ed;
+  color: var(--tinta);
+}
+
+.accion.principal {
+  background: var(--rojo);
+  border-color: var(--rojo);
+  color: #fff;
+}
+
+.accion.principal:hover {
+  background: #a82f19;
+  border-color: #a82f19;
+  color: #fff;
+}
+
+/* INTRO */
+.intro {
+  padding-top: clamp(48px, 8vw, 96px);
+  padding-bottom: clamp(48px, 8vw, 96px);
+}
+
+.intro p {
+  max-width: 760px;
+  font-size: clamp(26px, 4.2vw, 44px);
+  line-height: 1.2;
+}
+
+/* SERVICIOS */
+.servicios {
+  padding-bottom: clamp(56px, 9vw, 112px);
+}
+
+.servicios h2,
+.estilo h2,
+.hoja h2,
+.voces h2 {
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1.05;
+  margin-bottom: 32px;
+  max-width: 560px;
+}
+
+.servicios ol {
+  list-style: none;
+}
+
+.servicios li {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 8px;
+  padding: 24px 0;
+  border-top: 1px solid var(--linea);
+}
+
+.servicios li:last-child {
+  border-bottom: 1px solid var(--linea);
+}
+
+.servicios h3 {
+  font-size: 28px;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.servicios li p {
+  color: var(--mute);
+  max-width: 480px;
+}
+
+/* ESTILO */
+.estilo {
+  background: var(--tinta);
+  color: #f2f1ed;
+  padding: clamp(56px, 9vw, 112px) 0;
+}
+
+.estilo-tira {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 0 24px 8px;
+}
+
+.estilo-tira article {
+  flex: 0 0 min(340px, 78vw);
+  scroll-snap-align: start;
+}
+
+.estilo-tira img {
+  aspect-ratio: 4 / 5;
+  height: auto;
+  margin-bottom: 14px;
+}
+
+.estilo .meta {
+  color: rgba(242, 241, 237, 0.6);
+}
+
+.estilo h3 {
+  font-size: 26px;
+  line-height: 1.1;
+  margin: 4px 0 8px;
+}
+
+.estilo article p {
+  color: rgba(242, 241, 237, 0.7);
+  font-size: 15px;
+}
+
+/* HOJA DE CONTACTOS */
+.hoja {
+  padding: clamp(56px, 9vw, 112px) 0;
+}
+
+.hoja-rejilla {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 12px;
+}
+
+.hoja figure {
+  background: var(--tinta);
+  padding: 10px 10px 12px;
+}
+
+.hoja figure img {
+  aspect-ratio: 3 / 4;
+  height: auto;
+  transition: filter 0.3s;
+}
+
+.hoja figure:hover img {
+  filter: grayscale(0) contrast(1);
+}
+
+.hoja figcaption {
+  display: grid;
+  gap: 1px;
+  margin-top: 10px;
+  color: #f2f1ed;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.hoja figcaption .meta {
+  color: var(--rojo);
+}
+
+.hoja figcaption em {
+  font-style: normal;
+  color: rgba(242, 241, 237, 0.6);
+  font-size: 12.5px;
+}
+
+/* VOCES */
+.voces {
+  padding-bottom: clamp(56px, 9vw, 112px);
+}
+
+.voces blockquote {
+  max-width: 680px;
+  padding: 28px 0;
+  border-top: 1px solid var(--linea);
+}
+
+.voces blockquote:last-child {
+  border-bottom: 1px solid var(--linea);
+}
+
+.voces blockquote p {
+  font-size: clamp(22px, 3vw, 28px);
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.voces cite {
+  font-style: normal;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12.5px;
+  color: var(--mute);
+}
+
+/* GUARDAR CONTACTO */
+.guardar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-top: 1px solid var(--linea);
+}
+
+.guardar h3 {
+  font-size: 28px;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.guardar p {
+  color: var(--mute);
+  max-width: 320px;
+  font-size: 15px;
+}
+
+.guardar button {
+  padding: 15px 24px;
+  background: var(--tinta);
+  color: var(--papel);
+  border: none;
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.guardar button:hover {
+  background: var(--rojo);
+}
+
+/* PIE */
+.pie {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 24px;
+  padding-bottom: 40px;
+  font-size: 13px;
+  color: var(--mute);
+}
+
+.pie a {
+  text-decoration: none;
+}
+
+.pie a:hover {
+  color: var(--rojo);
+}
+
+/* RESPONSIVE */
+@media (min-width: 720px) {
+  .acciones {
+    grid-template-columns: repeat(3, auto);
+    justify-content: start;
+    max-width: none;
+  }
+
+  .accion {
+    padding: 15px 28px;
+  }
+
+  .hoja-rejilla {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .estilo-tira {
+    padding: 0 max(24px, calc((100vw - 1040px) / 2 + 24px)) 8px;
+  }
+}
