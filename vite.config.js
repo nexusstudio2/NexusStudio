@@ -13,6 +13,10 @@ export default defineConfig({
           __dirname,
           "servicios/SERVICIOS/Catalogo-Digital/Floreria/index.html",
         ),
+        pasteleria: resolve(
+          import.meta.dirname,
+          "servicios/SERVICIOS/Catalogo-Digital/Pasteleria/index.html",
+        ),
       },
     },
   },
