@@ -4,6 +4,7 @@ import { resolve } from "path";
 
 const catalogo = "servicios/SERVICIOS/Catalogo-Digital";
 const tarjeta = "servicios/SERVICIOS/Tarjeta-Digital";
+const menu = "servicios/SERVICIOS/Menu-QR";
 
 export default defineConfig({
   plugins: [react()],
@@ -26,6 +27,16 @@ export default defineConfig({
           import.meta.dirname,
           `${tarjeta}/Maquillista-Beauty/index.html`,
         ),
+        planner: resolve(
+          import.meta.dirname,
+          `${tarjeta}/Wedding-Planner/index.html`,
+        ),
+        restaurante: resolve(
+          import.meta.dirname,
+          `${menu}/Restaurante/index.html`,
+        ),
+        cafe: resolve(import.meta.dirname, `${menu}/Cafe-Raiz/index.html`),
+        bar: resolve(import.meta.dirname, `${menu}/Bar-Cantina/index.html`),
       },
     },
   },
