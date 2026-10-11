@@ -1,0 +1,352 @@
+:root {
+  --maiz: #f5c518;
+  --chile: #d3261a;
+  --tinta: #17120f;
+  --blanco: #fffdf4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--maiz);
+  color: var(--tinta);
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+.especial-nombre,
+.especial-precio,
+.precio {
+  font-family: "Alfa Slab One", serif;
+  font-weight: 400;
+}
+
+.wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* PORTADA */
+.portada {
+  padding-top: 40px;
+}
+
+.portada h1 {
+  font-size: clamp(64px, 17vw, 156px);
+  line-height: 0.92;
+  letter-spacing: -0.01em;
+}
+
+.portada p {
+  max-width: 340px;
+  margin: 18px 0 28px;
+  font-weight: 500;
+}
+
+.portada-foto {
+  height: auto;
+  aspect-ratio: 3 / 2;
+  border-top: 4px solid var(--tinta);
+  border-bottom: 4px solid var(--tinta);
+}
+
+/* ESPECIAL */
+.especial {
+  background: var(--chile);
+  color: var(--blanco);
+  padding: 22px 0;
+}
+
+.especial-in {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.especial-dia {
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.especial-nombre {
+  font-size: clamp(26px, 6vw, 40px);
+  line-height: 1.05;
+  margin-top: 2px;
+}
+
+.especial-precio {
+  background: var(--maiz);
+  color: var(--tinta);
+  padding: 8px 14px;
+  font-size: clamp(24px, 5vw, 34px);
+  white-space: nowrap;
+}
+
+/* NAV */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--tinta);
+}
+
+.nav-in {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  padding: 0 12px;
+  scrollbar-width: none;
+}
+
+.nav-in::-webkit-scrollbar {
+  display: none;
+}
+
+.nav a {
+  flex-shrink: 0;
+  padding: 14px 12px 11px;
+  color: rgba(255, 253, 244, 0.7);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  border-bottom: 3px solid transparent;
+}
+
+.nav a.on {
+  color: var(--maiz);
+  border-bottom-color: var(--maiz);
+}
+
+.nav a.nav-res {
+  margin-left: auto;
+  color: var(--tinta);
+  background: var(--maiz);
+  border-bottom-color: var(--maiz);
+}
+
+/* CATEGORÍAS */
+.cat {
+  padding: 44px 0 20px;
+  scroll-margin-top: 48px;
+  border-bottom: 4px solid var(--tinta);
+}
+
+.cat-lado h2 {
+  font-size: clamp(44px, 11vw, 76px);
+  line-height: 0.95;
+  margin-bottom: 20px;
+}
+
+.cat-lado img {
+  height: auto;
+  aspect-ratio: 16 / 10;
+  border: 3px solid var(--tinta);
+  margin-bottom: 8px;
+}
+
+.cat ul {
+  list-style: none;
+  padding-bottom: 20px;
+}
+
+.cat li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1.5px solid rgba(23, 18, 15, 0.3);
+}
+
+.cat li:last-child {
+  border-bottom: none;
+}
+
+.cat h3 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.cat li p {
+  font-size: 14.5px;
+  max-width: 420px;
+  margin-top: 2px;
+}
+
+.precio {
+  color: var(--chile);
+  font-size: 24px;
+  white-space: nowrap;
+}
+
+/* RESERVA */
+.reserva {
+  background: var(--tinta);
+  color: var(--blanco);
+  padding: 56px 0;
+  scroll-margin-top: 48px;
+}
+
+.reserva-in {
+  display: grid;
+  gap: 32px;
+}
+
+.reserva h2 {
+  font-size: clamp(40px, 9vw, 64px);
+  line-height: 1;
+  color: var(--maiz);
+  margin-bottom: 12px;
+}
+
+.reserva-in > div > p {
+  max-width: 340px;
+  color: rgba(255, 253, 244, 0.8);
+}
+
+.reserva form {
+  display: grid;
+  gap: 14px;
+}
+
+.reserva label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 253, 244, 0.75);
+}
+
+.reserva input,
+.reserva select {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  padding: 10px 0;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255, 253, 244, 0.4);
+  border-radius: 0;
+  color: var(--blanco);
+  font: inherit;
+  font-size: 16px;
+}
+
+.reserva input:focus,
+.reserva select:focus {
+  outline: none;
+  border-bottom-color: var(--maiz);
+}
+
+.reserva select option {
+  background: var(--tinta);
+}
+
+.fila-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.reserva button {
+  margin-top: 8px;
+  padding: 16px 24px;
+  background: var(--maiz);
+  color: var(--tinta);
+  border: none;
+  font: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.reserva button:hover {
+  background: #ffd84a;
+}
+
+/* DATOS */
+.datos {
+  display: grid;
+  gap: 24px;
+  padding-top: 40px;
+  padding-bottom: 32px;
+}
+
+.dato-t {
+  font-family: "Alfa Slab One", serif;
+  font-size: 22px;
+  margin-bottom: 2px;
+}
+
+.datos a {
+  display: inline-block;
+  margin-top: 6px;
+  font-weight: 600;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.pie {
+  padding-bottom: 36px;
+  font-size: 13px;
+}
+
+.pie a {
+  text-decoration: none;
+}
+
+.pie a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (min-width: 800px) {
+  .portada-foto {
+    aspect-ratio: 21 / 8;
+  }
+
+  .cat-in {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 56px;
+    align-items: start;
+  }
+
+  .cat ul {
+    padding-top: 8px;
+  }
+
+  .reserva-in {
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+  }
+
+  .datos {
+    grid-template-columns: 1fr 1fr;
+  }
+}
