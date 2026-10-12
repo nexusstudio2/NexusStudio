@@ -5,6 +5,7 @@ import { resolve } from "path";
 const catalogo = "servicios/SERVICIOS/Catalogo-Digital";
 const tarjeta = "servicios/SERVICIOS/Tarjeta-Digital";
 const menu = "servicios/SERVICIOS/Menu-QR";
+const landing = "servicios/SERVICIOS/Landing-Page";
 
 export default defineConfig({
   plugins: [react()],
@@ -37,6 +38,9 @@ export default defineConfig({
         ),
         cafe: resolve(import.meta.dirname, `${menu}/Cafe-Raiz/index.html`),
         bar: resolve(import.meta.dirname, `${menu}/Bar-Cantina/index.html`),
+        barberia: resolve(import.meta.dirname, `${landing}/Barberia/index.html`),
+        gimnasio: resolve(import.meta.dirname, `${landing}/Gimnasio/index.html`),
+        dental: resolve(import.meta.dirname, `${landing}/Clinica-Dental/index.html`),
       },
     },
   },
