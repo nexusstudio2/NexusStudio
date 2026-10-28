@@ -6,6 +6,7 @@ const catalogo = "servicios/SERVICIOS/Catalogo-Digital";
 const tarjeta = "servicios/SERVICIOS/Tarjeta-Digital";
 const menu = "servicios/SERVICIOS/Menu-QR";
 const landing = "servicios/SERVICIOS/Landing-Page";
+const web = "demos";
 
 export default defineConfig({
   plugins: [react()],
@@ -40,7 +41,13 @@ export default defineConfig({
         bar: resolve(import.meta.dirname, `${menu}/Bar-Cantina/index.html`),
         barberia: resolve(import.meta.dirname, `${landing}/Barberia/index.html`),
         gimnasio: resolve(import.meta.dirname, `${landing}/Gimnasio/index.html`),
-        dental: resolve(import.meta.dirname, `${landing}/Clinica-Dental/index.html`),
+        dental: resolve(
+          import.meta.dirname,
+          `${landing}/Clinica-Dental/index.html`,
+        ),
+        webBarberia: resolve(import.meta.dirname, `${web}/barberia/index.html`),
+        webGimnasio: resolve(import.meta.dirname, `${web}/gimnasio/index.html`),
+        webDentista: resolve(import.meta.dirname, `${web}/dentista/index.html`),
       },
     },
   },
