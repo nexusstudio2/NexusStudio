@@ -48,6 +48,7 @@ export default defineConfig({
         webBarberia: resolve(import.meta.dirname, `${web}/barberia/index.html`),
         webGimnasio: resolve(import.meta.dirname, `${web}/gimnasio/index.html`),
         webDentista: resolve(import.meta.dirname, `${web}/dentista/index.html`),
+        tarjetaFisica: resolve(import.meta.dirname, "tarjeta.html"),
       },
     },
   },
